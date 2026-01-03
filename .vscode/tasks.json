@@ -1,0 +1,38 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "clean",
+      "type": "shell",
+      "command": "rm",
+      "args": [
+        "-f",
+        "npdist",
+        "*.o"
+      ]
+    },
+    {
+      "label": "build npdist",
+      "type": "shell",
+      "command": "gcc",
+      "args": [
+        "-O0",
+        "-Wall",
+        "-Wextra",
+        "-g",
+        "-Iinclude",
+        "-o",
+        "npdist",
+        "src/npdist.c"
+      ],
+      "dependsOn": [
+        "clean"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$gcc"]
+    }
+  ]
+}
