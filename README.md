@@ -1,2 +1,2 @@
 # npdist
-Computes absolute track distance between norming points using route-segment-offset reference data
+A lightweight C utility that resolves norming point IDs into absolute track positions and calculates distance using route, segment, and offset mapping. Designed for railway signaling and odometry reference workflows
