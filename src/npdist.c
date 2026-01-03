@@ -12,26 +12,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <errno.h>
-
-#define MAX_ROUTES   64
-#define MAX_SEGS     4096   // should be safely above your max segment index
-#define MAX_NPIDS    4096   // should be safely above your max NPId
-
-typedef struct {
-  int present;
-  int route;
-  int seg;
-  int off;
-  int type;
-} NPRec;
-
-typedef struct {
-  int present;
-  int max_seg;
-  int seg_len[MAX_SEGS + 1];     // 1-based segment index
-  long long seg_start[MAX_SEGS + 1]; // prefix start position for segment
-  int prefix_built;
-} RouteRec;
+#include "npdist.h"
 
 static RouteRec g_routes[MAX_ROUTES];
 static NPRec    g_np[MAX_NPIDS];
