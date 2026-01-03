@@ -1,0 +1,6 @@
+# Build artifacts
+npdist
+*.o
+
+# Debug / temp
+*.out
