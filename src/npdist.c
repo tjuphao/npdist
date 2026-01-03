@@ -5,7 +5,7 @@
     gcc -O2 -Wall -Wextra -o npdist npdist.c
 
   Run:
-    ./npdist /path/to/vato_dev.log 2 34
+    ./npdist /path/to/sample.dat 2 34
 */
 
 #include <stdio.h>
@@ -127,7 +127,7 @@ static void parse_file(const char *path) {
 
 int main(int argc, char **argv) {
   if (argc != 4) {
-    fprintf(stderr, "Usage: %s <vato_dev.log> <NPId_A> <NPId_B>\n", argv[0]);
+    fprintf(stderr, "Usage: %s <sample.dat> <NPId_A> <NPId_B>\n", argv[0]);
     return 2;
   }
 
